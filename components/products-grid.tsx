@@ -89,10 +89,10 @@ export function ProductsGrid() {
                   <span className="text-muted-foreground">({product.ratings.count})</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xl font-bold text-blue-900">${product.price.toFixed(2)}</span>
+                  <span className="text-xl font-bold text-blue-900">₦{product.price.toFixed(2)}</span>
                   {product.comparePrice && product.comparePrice > product.price && (
                     <span className="text-sm text-muted-foreground line-through">
-                      ${product.comparePrice.toFixed(2)}
+                      ₦{product.comparePrice.toFixed(2)}
                     </span>
                   )}
                 </div>

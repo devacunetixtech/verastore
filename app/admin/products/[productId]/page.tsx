@@ -214,7 +214,7 @@ export default function EditProductPage({ params }: { params: { productId: strin
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="compareAtPrice">Compare at Price ($)</Label>
+                  <Label htmlFor="compareAtPrice">Compare at Price (₦)</Label>
                   <Input
                     id="compareAtPrice"
                     type="number"
