@@ -203,7 +203,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             <div className="flex items-baseline gap-3">
               <span className="text-4xl font-bold text-blue-900">${product.price.toFixed(2)}</span>
               {product.comparePrice && product.comparePrice > product.price && (
-                <span className="text-xl text-muted-foreground line-through">${product.comparePrice.toFixed(2)}</span>
+                <span className="text-xl text-muted-foreground line-through">₦{product.comparePrice.toFixed(2)}</span>
               )}
             </div>
 

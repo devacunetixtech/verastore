@@ -111,7 +111,7 @@ function OrderConfirmationContent() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Total Amount</p>
-                  <p className="font-semibold text-blue-900">${order?.totalAmount?.toFixed(2)}</p>
+                  <p className="font-semibold text-blue-900">₦{order?.totalAmount?.toFixed(2)}</p>
                 </div>
               </div>
 
@@ -150,7 +150,7 @@ function OrderConfirmationContent() {
                         <p className="text-sm text-muted-foreground">Quantity: {item.quantity}</p>
                       </div>
                       <div className="text-right">
-                        <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
+                        <p className="font-semibold">₦{(item.price * item.quantity).toFixed(2)}</p>
                       </div>
                     </div>
                   ))}

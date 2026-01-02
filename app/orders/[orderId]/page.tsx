@@ -187,10 +187,10 @@ export default function OrderDetailPage({ params }: { params: Promise<{ orderId:
                           <h4 className="font-semibold mb-1">{item.name}</h4>
                         </Link>
                         <p className="text-sm text-muted-foreground">Quantity: {item.quantity}</p>
-                        <p className="text-sm text-muted-foreground">${item.price.toFixed(2)} each</p>
+                        <p className="text-sm text-muted-foreground">₦{item.price.toFixed(2)} each</p>
                       </div>
                       <div className="text-right">
-                        <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
+                        <p className="font-semibold">₦{(item.price * item.quantity).toFixed(2)}</p>
                       </div>
                     </div>
                     <Separator className="mt-4" />
@@ -200,20 +200,20 @@ export default function OrderDetailPage({ params }: { params: Promise<{ orderId:
                 <div className="space-y-2 pt-4">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span>${(order.totalAmount - order.shippingCost - order.tax).toFixed(2)}</span>
+                    <span>₦{(order.totalAmount - order.shippingCost - order.tax).toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Shipping</span>
-                    <span>{order.shippingCost === 0 ? "Free" : `$${order.shippingCost.toFixed(2)}`}</span>
+                    <span>{order.shippingCost === 0 ? "Free" : `₦${order.shippingCost.toFixed(2)}`}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Tax</span>
-                    <span>${order.tax.toFixed(2)}</span>
+                    <span>₦{order.tax.toFixed(2)}</span>
                   </div>
                   <Separator />
                   <div className="flex justify-between text-lg font-bold">
                     <span>Total</span>
-                    <span className="text-blue-900">${order.totalAmount.toFixed(2)}</span>
+                    <span className="text-blue-900">₦{order.totalAmount.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
