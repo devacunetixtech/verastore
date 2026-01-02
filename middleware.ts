@@ -6,6 +6,8 @@ export default withAuth(
     const token = req.nextauth.token
     const path = req.nextUrl.pathname
 
+    console.log("[v0] Middleware - Path:", path, "Has token:", !!token, "Role:", token?.role)
+
     // Protect admin routes
     if (path.startsWith("/admin") && token?.role !== "admin") {
       return NextResponse.redirect(new URL("/", req.url))
@@ -18,6 +20,8 @@ export default withAuth(
       authorized: ({ token, req }) => {
         const path = req.nextUrl.pathname
 
+        console.log("[v0] Authorization check - Path:", path, "Has token:", !!token)
+
         // Public paths
         if (
           path === "/" ||
@@ -26,7 +30,9 @@ export default withAuth(
           path.startsWith("/register") ||
           path.startsWith("/forgot-password") ||
           path.startsWith("/reset-password") ||
-          path.startsWith("/verify-email")
+          path.startsWith("/verify-email") ||
+          path.startsWith("/contact") ||
+          path.startsWith("/faq")
         ) {
           return true
         }
