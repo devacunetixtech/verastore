@@ -95,7 +95,7 @@ export default function OrdersPage() {
                   </div>
                   <div className="flex flex-col sm:items-end gap-2">
                     <Badge className={getStatusColor(order.orderStatus)}>{order.orderStatus}</Badge>
-                    <span className="text-sm font-semibold text-blue-900">${order.totalAmount.toFixed(2)}</span>
+                    <span className="text-sm font-semibold text-blue-900">₦{order.totalAmount.toFixed(2)}</span>
                   </div>
                 </div>
               </CardHeader>

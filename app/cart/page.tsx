@@ -108,7 +108,7 @@ export default function CartPage() {
                       <Link href={`/products/${item.product?.slug}`} className="hover:text-primary">
                         <h3 className="font-semibold mb-1">{item.product?.name}</h3>
                       </Link>
-                      <p className="text-sm text-muted-foreground mb-2">${item.price.toFixed(2)} each</p>
+                      <p className="text-sm text-muted-foreground mb-2">₦{item.price.toFixed(2)} each</p>
                       <div className="flex items-center gap-2">
                         <Button
                           variant="outline"
@@ -141,7 +141,7 @@ export default function CartPage() {
                       </div>
                     </div>
                     <div className="flex flex-col items-end justify-between">
-                      <p className="font-bold text-lg">${(item.price * item.quantity).toFixed(2)}</p>
+                      <p className="font-bold text-lg">₦{(item.price * item.quantity).toFixed(2)}</p>
                       <Button
                         variant="ghost"
                         size="icon"
@@ -174,7 +174,7 @@ export default function CartPage() {
                   <Separator />
                   <div className="flex justify-between text-lg font-bold">
                     <span>Total</span>
-                    <span className="text-blue-900">${cart.totalAmount.toFixed(2)}</span>
+                    <span className="text-blue-900">₦{cart.totalAmount.toFixed(2)}</span>
                   </div>
                 </div>
                 <Button className="w-full" size="lg" onClick={() => router.push("/checkout")}>
